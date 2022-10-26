@@ -48,18 +48,18 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4070758372805021848}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 2
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8469494145858465668, guid: af50c4e21f0e9b9419ff00e3c39e7711, type: 3}
+  - {fileID: 2100000, guid: aaef91197ff14a8478f357891b0dc1ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2174412113162131204}
   - component: {fileID: 2086691313613572548}
   m_Layer: 0
-  m_Name: Ram
+  m_Name: BossRam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f35701e66145f42b9376d1cecbb834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 5
-  difficultRamp: 1
+  maxHitPoints: 10
+  difficultRamp: 10
 --- !u!114 &2086691313613572548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,5 +169,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0130cd1e1ee71c540a8a157307506ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldReward: 10
-  goldPenalty: 30
+  goldReward: 25
+  goldPenalty: 50

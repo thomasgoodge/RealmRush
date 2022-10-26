@@ -6,7 +6,9 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField] [Range(0,50)] int poolSize = 8;
     [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject bossPrefab;
     [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
+    [SerializeField] int enemyspawned = 0;
 
     GameObject[] pool;
 
@@ -29,8 +31,16 @@ public class ObjectPool : MonoBehaviour
         {
             pool[i] = Instantiate(enemyPrefab, transform);
             pool[i].SetActive(false);
+           
+            
 
         }
+        
+        
+    }
+    void SpawnBoss()
+    {
+        Instantiate(bossPrefab, transform);
     }
 
     void EnableObjectInPool()
@@ -50,7 +60,12 @@ public class ObjectPool : MonoBehaviour
         while(true)
         {
             EnableObjectInPool();
+            enemyspawned ++;
             yield return new WaitForSeconds(spawnTimer);
+            if(enemyspawned % 10 == 0)
+            {
+                SpawnBoss();
+            }
         }
     }
 
