@@ -19,6 +19,8 @@ public class PathFinder : MonoBehaviour
 
     GridManager gridManager;
     Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
+
+
     void Awake()
     {
         gridManager = FindObjectOfType<GridManager>();
@@ -39,8 +41,9 @@ public class PathFinder : MonoBehaviour
 
         BuildPath();
 
-        
-    
+    }
+
+
     void ExploreNeighbours()
     {
         List<Node> neighbours = new List<Node>();
@@ -108,4 +111,4 @@ public class PathFinder : MonoBehaviour
     }
 
 }
-}
+
